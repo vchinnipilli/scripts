@@ -14,9 +14,7 @@ Write-Output $matches.Matches.Count
 
 if ($matchCount -gt $threshold)
 {
-    $message = "$filename includes $matchCount occurances of $phrase. Threshold i s $threshold. "
-    Write-Output $message
-    throw $message
+    throw "$filename includes $matchCount occurances of $phrase. Threshold i s $threshold. "
 }
 else
 {
